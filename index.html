@@ -1,0 +1,38 @@
+<html>
+    <head>
+      <style>
+        body{
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+}
+h1{
+    color: white;
+    background-color: lightblue;
+  margin: 16px;
+    padding: 32px;
+    border: 2px;
+}
+      </style>
+    </head>
+    <body>
+
+<h1>Palindrome Recognizer</h1>
+  <label for="input">Enter a word or phrase:</label><br>
+   <input type="text" id="input"><br><br>
+  <button onclick="checkPalindrome()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function checkPalindrome() {
+      var input = document.getElementById('input').value.toLowerCase();
+      var reversedInput = input.split('').reverse().join('');
+      if (input === reversedInput) {
+        document.getElementById('result').innerHTML = '"' + input + '" is a palindrome!';
+      } else {
+             document.getElementById('result').innerHTML = '"' + input + '" is not a palindrome.';
+      }
+    }
+  </script>
+
+    </body>
+</html>
